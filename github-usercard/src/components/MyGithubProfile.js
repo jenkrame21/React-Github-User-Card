@@ -27,13 +27,15 @@ class MyGithubProfile extends React.Component {
                 <header>
                     <h1>{this.state.myInfo.name}'s GitHub Profile</h1>
                 </header>
-                <div className="profile">
+                <div className="profile-container">
                     <img src={this.state.myInfo.avatar_url} alt="Jennifer Kramer"/>
-                    <h4>Name: {this.state.myInfo.name}</h4>
-                    <h4>Username: {this.state.myInfo.login}</h4>
-                    <h4>Bio: {this.state.myInfo.bio}</h4>
-                    <h4>Location: {this.state.myInfo.location}</h4>
-                    <h4>Number of Followers: {this.state.myInfo.followers}</h4>
+                    <div className="profile-info">
+                        <h4>Name: {this.state.myInfo.name}</h4>
+                        <h4>Username: {this.state.myInfo.login}</h4>
+                        <h4>Bio: {this.state.myInfo.bio}</h4>
+                        <h4>Location: {this.state.myInfo.location}</h4>
+                        <h4>Number of Followers: {this.state.myInfo.followers}</h4>
+                    </div>
                 </div>
             </div>
         )

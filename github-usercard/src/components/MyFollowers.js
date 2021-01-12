@@ -26,16 +26,19 @@ class MyFollowers extends React.Component {
         console.log("MyFollowers: Component Renders")
         return(
             <div className="myFollowers">
-                <h1>My Followers</h1>
-                <div className="myFollowers-data">
+                <header>
+                    <h1>Jennifer Kramer's Github Followers</h1>
+                </header>
+                <div>
                     {
                         this.state.followers.map(follower => (
-                            <div>
+                            <div className="profile-container">
                                 <img src={follower.avatar_url} alt="follower images" key={follower}/>
-                                <h4>Name: {follower.name}</h4>
-                                <h4>Username: {follower.login}</h4>
-                                <h4>Repos: {follower.repos_url}</h4>
-                                <h4>GitHub Profile URL: {follower.url}</h4>
+                                <div className="profile-info">
+                                    <h4>Username: {follower.login}</h4>
+                                    <h4>Repos: {follower.repos_url}</h4>
+                                    <h4>GitHub Profile URL: {follower.url}</h4>
+                                </div>
                             </div>
                         ))
                     }
