@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import '../styles/style.css';
-import FollowerCard from ''
 
 class MyFollowers extends React.Component {
 
@@ -28,7 +27,19 @@ class MyFollowers extends React.Component {
         return(
             <div className="myFollowers">
                 <h1>My Followers</h1>
-                <FollowerCard />
+                <div className="myFollowers-data">
+                    {
+                        this.state.followers.map(follower => (
+                            <div>
+                                <img src={follower.avatar_url} alt="follower images" key={follower}/>
+                                <h4>Name: {follower.name}</h4>
+                                <h4>Username: {follower.login}</h4>
+                                <h4>Repos: {follower.repos_url}</h4>
+                                <h4>GitHub Profile URL: {follower.url}</h4>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
         )
     }
