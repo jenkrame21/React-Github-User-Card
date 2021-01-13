@@ -1,0 +1,24 @@
+img {
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin: 2%;
+}
+
+h4 {
+    margin: 1% 0;
+}
+
+header {
+    text-align: center;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+}
